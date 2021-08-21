@@ -29,7 +29,7 @@ function applyPostCallProp(obj, prop, func) {
 	}
 }
 
-function applyAsyncPreCallProp(pbj, prop, func) {
+function applyAsyncPreCallProp(obj, prop, func) {
 	const oldFunc = obj[prop];
 	obj[prop] = async function(...args) {
 		await func.call(obj, ...args);
